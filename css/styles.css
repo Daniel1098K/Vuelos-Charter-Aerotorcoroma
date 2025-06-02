@@ -1,0 +1,530 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004225;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* Navbar como botones */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  padding: 10px 15px;
+  background-color: #006400;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.navbar a:hover {
+  background-color: #004d00; /* Más oscuro al pasar el mouse */
+}
+
+.navbar a:active {
+  transform: scale(0.95); /* Efecto de clic */
+  background-color: #003300;
+}
+
+/* Hero section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* -------- Sección de Registro -------- */
+.registro {
+  padding: 40px 20px;
+  background-color: #f0fdf4; /* Verde claro muy suave */
+  text-align: center;
+}
+
+.registro h2 {
+  font-size: 2rem;
+  color: #004c3f;
+  margin-bottom: 20px;
+}
+
+.registro form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 15px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.registro input,
+.registro textarea {
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registro input:focus,
+.registro textarea:focus {
+  border-color: #007866;
+  box-shadow: 0 0 0 3px rgba(0, 120, 102, 0.2);
+  outline: none;
+}
+
+.registro button {
+  padding: 12px;
+  background-color: #006400;
+  color: white;
+  border: none;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.registro button:hover {
+  background-color: #228B22;
+}
+
+.registro button:active {
+  transform: scale(0.97);
+  background-color: #004d00;
+}
+
+/* Responsive para el formulario */
+@media (max-width: 768px) {
+  .registro form {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #004225;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #aaffaa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    height: 300px;
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .registro form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* -------- Botones de navegación -------- */
+.navbar a {
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+/* -------- Sección de planes -------- */
+.planes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  max-width: 320px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.plan-card h3 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 10px 0 15px;
+}
+
+.plan-card ul li::before {
+  content: "• ";
+  color: #003366;
+}
+
+.plan-card strong {
+  color: #2c3e50;
+}
+
+/* -------- Responsividad -------- */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  padding-bottom: 80px; /* espacio para carrito flotante */
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #004c3f;
+  color: #fff;
+}
+
+header.navbar .logo {
+  height: 50px;
+}
+
+header.navbar nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+header.navbar nav a:hover {
+  background-color: #007866;
+}
+
+header.navbar nav a.active {
+  background-color: #006556;
+}
+
+/* Sección de Planes */
+.planes {
+  padding: 2rem;
+  text-align: center;
+}
+
+.planes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 por fila */
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1200px; /* Centrado en pantalla */
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.plan-card {
+  width: 100%;
+  max-width: 350px; /* Tamaño uniforme */
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-card h3 {
+  margin-bottom: 0.5rem;
+  color: #004c3f;
+}
+
+.plan-card ul {
+  list-style: disc;
+  margin: 0.5rem 0 1rem 1.2rem;
+}
+
+/* Tabla de rutas */
+.rutas {
+  padding: 2rem;
+}
+
+.rutas table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.rutas th, .rutas td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.rutas th {
+  background-color: #004c3f;
+  color: #fff;
+}
+
+.rutas button {
+  padding: 0.5rem 1rem;
+  background-color: #007866;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.rutas button:hover {
+  background-color: #005f4a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .planes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header.navbar nav a {
+    display: block;
+    margin: 0.3rem 0;
+  }
+
+  .rutas table {
+    font-size: 0.9rem;
+  }
+
+  #carrito-flotante {
+    width: 50px;
+    height: 50px;
+  }
+
+  #carrito-flotante img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #detalle-carrito {
+    width: 200px;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.tooltip.hidden {
+  display: none;
+}
+
+.tooltip img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.tooltip h4 {
+  margin-top: 0;
+  color: #004aad;
+}
+
+.tooltip p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+/* -------- Título Principal -------- */
+.titulo-principal {
+  background-color: #e0f7f1; /* Verde muy suave */
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 3px solid #004c3f;
+}
+
+.titulo-principal h2 {
+  font-size: 2.5rem;
+  color: #004c3f;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* -------- Main contenido -------- */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+main h1 {
+  color: #004225;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Contacto */
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.info-item i {
+  color: #004c3f;
+  font-size: 1.2rem;
+}

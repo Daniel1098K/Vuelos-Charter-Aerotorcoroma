@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ver Planes - Aero Torcoroma</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="java/planes.js"></script>
+  <link rel="icon" href="file/Sin_título-removebg-preview.png">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Coloca aquí el logo si lo deseas -->
+      <img src="file/Sin_título-removebg-preview.png" alt="Logo Aero Torcoroma">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Ver Planes</a></li>
+        <li><a href="contáctanos.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Nuestros Aviones Charter</h1>
+      <p>Explora las opciones disponibles para volar a cualquier parte del país</p>
+    </div>
+  </section>
+
+  <section class="registro">
+    <h2>Servicios Disponibles</h2>
+    <div class="planes-container">
+    <a href="https://wa.me/573115460790?text=Hola,%20quisiera%20preguntar%20sobre%20el%20servicio%20básico%20de%204pax,%20he%20visto%20el%20plan%20desde%20la%20página%20web." target="_blank" style="text-decoration: none; color: inherit;">
+  <div class="plan-card">
+    <img src="file/Basico.png" alt="Avión pequeño Plan Básico">
+    <h3>Servicio Básico</h3>
+    <p>Ideal para viajes cortos y ejecutivos dentro del país.</p>
+    <ul>
+      <li>Capacidad: 4 pasajeros</li>
+      <li>Ruta: Medellín - Montería</li>
+      <li>Incluye piloto y seguro</li>
+    </ul>
+    <p><strong>Haz clic para consultar vía WhatsApp</strong></p>
+  </div>
+</a>
+
+  
+      <!-- Plan 2 -->
+     <a href="https://wa.me/573115460790?text=Hola,%20quisiera%20preguntar%20sobre%20el%20servicio%20ejecutivo%20de%208%20pasajeros,%20he%20visto%20el%20plan%20desde%20la%20página%20web." target="_blank" style="text-decoration: none; color: inherit;">
+  <div class="plan-card">
+    <img src="file/Ejecutivo.jpg" alt="Avión mediano Plan Familiar">
+    <h3>Servicio Ejecutivo</h3>
+    <p>Perfecto para la clase ejecutiva</p>
+    <ul>
+      <li>Capacidad: 8 pasajeros</li>
+      <li>Ruta: Bogotá - Santa Marta</li>
+      <li>Incluye refrigerios y equipaje</li>
+    </ul>
+    <p><strong>Haz clic para consultar vía WhatsApp</strong></p>
+  </div>
+</a>
+
+  
+      <!-- Plan 3 -->
+      <a href="https://wa.me/573115460790?text=Hola,%20quisiera%20preguntar%20sobre%20el%20servicio%20de%20avión%20ambulancia,%20lo%20he%20visto%20desde%20la%20página%20web." target="_blank" style="text-decoration: none; color: inherit;">
+  <div class="plan-card">
+    <img src="file/Ambulancia.png" alt="Avión ambulancia">
+    <h3>Servicio Avión Ambulancia</h3>
+    <p>Servicio médico aéreo especializado para emergencias.</p>
+    <ul>
+      <li>Personal médico a bordo</li>
+      <li>Equipos de soporte vital</li>
+      <li>Rutas nacionales urgentes</li>
+    </ul>
+    <p><strong>Haz clic para consultar vía WhatsApp</strong></p>
+  </div>
+</a>
+
+
+<a href="https://wa.me/573115460790?text=Hola,%20quisiera%20preguntar%20sobre%20el%20servicio%20Jet%20SABRE%2065,%20lo%20vi%20en%20la%20página%20web." target="_blank" style="text-decoration: none; color: inherit;">
+  <div class="plan-card">
+    <img src="file/Jet Sabre65.png" alt="Avión jet">
+    <h3>Servicio Jet SABRE 65</h3>
+    <p>Servicio de Jet privado tipo ejecutivo</p>
+    <ul>
+      <li>Capacidad para 7 pasajeros</li>
+      <li>Comodidad</li>
+      <li>Vuelos charter nacionales e internacionales urgentes</li>
+    </ul>
+    <p><strong>Haz clic para consultar vía WhatsApp</strong></p>
+  </div>
+</a>
+
+
+      <a href="https://wa.me/573115460790?text=Hola,%20quisiera%20preguntar%20sobre%20el%20servicio%20Jetstream%2032%20para%2019%20pasajeros,%20vi%20el%20plan%20en%20la%20web." target="_blank" style="text-decoration: none; color: inherit;">
+  <div class="plan-card">
+    <img src="file/20pax.jpg" alt="Avión 19pax">
+    <h3>Servicio Jetstream 32</h3>
+    <p>Viajes corporativos o grupales en avión turbohélice con capacidad para 19 pasajeros. Ideal para trayectos nacionales o regionales.</p>
+    <ul>
+      <li>Capacidad para 19 pasajeros</li>
+      <li>Vuelos empresariales regionales</li>
+      <li> Traslados VIP para grupos medianos</li>
+    </ul>
+    <p><strong>Haz clic para consultar vía WhatsApp</strong></p>
+  </div>
+</a>
+
+
+    </div>
+    <!-- Tooltip flotante -->
+<div id="tooltip" class="tooltip hidden">
+  <h4 id="tooltip-title"></h4>
+  <div id="tooltip-images"></div>
+  <p id="tooltip-text"></p>
+</div>
+
+  <section class="rutas">
+  <h2>Vuelos Charter Programados</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Desde</th>
+        <th>Hacia</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Plan</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-rutas">
+      <!-- Rutas se llenan por JavaScript -->
+    </tbody>
+  </table>
+</section>
+
+
+ 
+
+  <footer>
+    <p>Contáctanos: Teléfono 322 7537808 | WhatsApp: 311 5460790</p>
+    <p><a href="https://web.facebook.com/people/Vuelos-Charter-Aero-Torcoroma/100089643994505/" target="_blank">Facebook Oficial</a></p>
+    <p>&copy; 2025 Comercializadora Aero Torcoroma S.A.S.</p>
+  </footer>
+</body>
+</html>
