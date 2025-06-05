@@ -343,15 +343,19 @@ footer a:hover {
   }
 
   .navbar ul {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     gap: 8px;
   }
 
   .navbar a {
-    width: 100%;
+    flex: 1;
+    min-width: calc(33.333% - 6px);
     text-align: center;
-    padding: 12px;
+    padding: 12px 8px;
+    font-size: 0.9rem;
   }
 
   .hero {
