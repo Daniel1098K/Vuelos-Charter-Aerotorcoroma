@@ -1,4 +1,3 @@
-/* === Reset básico === */
 * {
   margin: 0;
   padding: 0;
@@ -6,86 +5,66 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background-color: #f8f8f8;
   color: #333;
   padding-bottom: 80px;
 }
 
-/* === Header / Navbar === */
-header,
-header.navbar {
+header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #004225;
+  background-color: #004c3f;
+  padding: 15px 20px;
   color: white;
-  padding: 10px 20px;
 }
 
-.logo img,
-header.navbar .logo {
-  height: 60px;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px 0;
-  justify-content: center;
+.logo img {
+  height: 50px;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
-  padding: 0;
 }
 
-.navbar a,
-header.navbar nav a {
+.navbar a {
   padding: 10px 15px;
-  background-color: #006400;
+  background-color: #007866;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 2px solid transparent;
-  transition: background-color 0.3s ease, transform 0.1s ease, border 0.3s;
+  transition: all 0.3s ease;
 }
 
-.navbar a:hover,
-header.navbar nav a:hover {
-  background-color: #004d00;
+.navbar a:hover {
+  background-color: #005f4a;
   border-color: white;
+  transform: translateY(-2px);
 }
 
-.navbar a:active,
-header.navbar nav a.active {
-  background-color: #003300;
+.navbar a:active {
   transform: scale(0.95);
 }
 
-/* === Hero Section === */
 .hero {
   background: url('https://i.postimg.cc/mgcFYh6k/Portada.jpg') no-repeat center center/cover;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 20px;
   color: white;
+  text-align: center;
 }
 
 .hero-text {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .hero h1 {
@@ -93,7 +72,43 @@ header.navbar nav a.active {
   margin-bottom: 10px;
 }
 
-/* === Registro === */
+.titulo-principal {
+  background-color: #e0f7f1;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 3px solid #004c3f;
+}
+
+.titulo-principal h2 {
+  font-size: 2.5rem;
+  color: #004c3f;
+  font-weight: bold;
+  margin: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+main h1 {
+  color: #004c3f;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 .registro {
   padding: 40px 20px;
   background-color: #f0fdf4;
@@ -109,13 +124,13 @@ header.navbar nav a.active {
 .registro form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   max-width: 500px;
   margin: auto;
-  background: #fff;
+  gap: 15px;
+  background: #ffffff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .registro input,
@@ -124,7 +139,7 @@ header.navbar nav a.active {
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 8px;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .registro input:focus,
@@ -136,50 +151,48 @@ header.navbar nav a.active {
 
 .registro button {
   padding: 12px;
-  background-color: #006400;
+  background-color: #007866;
   color: white;
   border: none;
   font-size: 1em;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 .registro button:hover {
-  background-color: #228B22;
+  background-color: #005f4a;
+  transform: translateY(-2px);
 }
 
 .registro button:active {
-  background-color: #004d00;
   transform: scale(0.97);
 }
 
-/* === Sección de Planes === */
 .planes {
-  padding: 2rem;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .planes-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .plan-card {
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   padding: 25px;
   text-align: left;
   transition: transform 0.3s ease;
 }
 
 .plan-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 .plan-card img {
@@ -189,19 +202,29 @@ header.navbar nav a.active {
 }
 
 .plan-card h3 {
-  color: #003366;
-  margin-bottom: 10px;
+  color: #004c3f;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
 }
 
 .plan-card ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin: 10px 0 15px;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
 }
 
-/* === Tabla de rutas === */
+.plan-card ul li::before {
+  content: "• ";
+  color: #007866;
+  font-weight: bold;
+}
+
+.plan-card strong {
+  color: #004c3f;
+}
+
 .rutas {
-  padding: 2rem;
+  padding: 40px 20px;
 }
 
 .rutas table {
@@ -210,105 +233,218 @@ header.navbar nav a.active {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.rutas th, .rutas td {
-  padding: 1rem;
+.rutas th,
+.rutas td {
+  padding: 15px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
 }
 
 .rutas th {
   background-color: #004c3f;
-  color: white;
+  color: #fff;
+  font-weight: bold;
 }
 
 .rutas button {
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   background-color: #007866;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .rutas button:hover {
   background-color: #005f4a;
+  transform: translateY(-2px);
 }
 
-/* === Footer === */
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.info-item i {
+  color: #004c3f;
+  font-size: 1.4rem;
+}
+
+.tooltip {
+  position: absolute;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 15px;
+  border-radius: 12px;
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip.hidden {
+  display: none;
+}
+
+.tooltip img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.tooltip h4 {
+  margin-top: 0;
+  color: #004c3f;
+}
+
+.tooltip p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
 footer {
-  background-color: #004225;
+  background-color: #004c3f;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
+  margin-top: 40px;
 }
 
 footer a {
   color: #aaffaa;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
+  color: white;
   text-decoration: underline;
 }
 
-/* === Responsive General === */
 @media (max-width: 768px) {
-  header,
-  header.navbar {
+  header {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 15px;
+    padding: 15px;
   }
 
-  nav,
   .navbar ul {
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    gap: 8px;
   }
 
   .navbar a {
     width: 100%;
     text-align: center;
+    padding: 12px;
   }
 
   .hero {
     height: 300px;
+    padding: 20px;
   }
 
   .hero h1 {
-    font-size: 2em;
+    font-size: 2.2em;
+  }
+
+  .titulo-principal h2 {
+    font-size: 2rem;
+  }
+
+  main {
+    margin: 20px 10px;
+    padding: 20px 15px;
   }
 
   .registro form {
-    width: 100%;
     padding: 20px;
+    margin: 0 10px;
   }
 
   .planes-container {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .plan-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .rutas {
+    padding: 20px 10px;
   }
 
   .rutas table {
+    font-size: 0.85rem;
+  }
+
+  .rutas th,
+  .rutas td {
+    padding: 8px 4px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .tooltip {
+    max-width: 250px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  .titulo-principal {
+    padding: 25px 15px;
+  }
+
+  .titulo-principal h2 {
+    font-size: 1.6rem;
+  }
+
+  .navbar a {
+    padding: 10px;
     font-size: 0.9rem;
   }
 
-  #carrito-flotante {
-    width: 50px;
-    height: 50px;
+  .registro {
+    padding: 25px 10px;
   }
 
-  #carrito-flotante img {
-    width: 24px;
-    height: 24px;
+  .plan-card {
+    padding: 20px;
   }
 
-  #detalle-carrito {
-    width: 200px;
+  .rutas table {
+    font-size: 0.75rem;
+  }
+
+  .tooltip {
+    max-width: 200px;
+    padding: 10px;
   }
 }
