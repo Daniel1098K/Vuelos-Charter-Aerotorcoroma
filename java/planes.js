@@ -1,10 +1,8 @@
-// planes.js
-
 const rutas = [
     { destino: "Bogotá", fecha: "2025-06-01", hora: "09:00", plan: "Plan Básico", precio: 3200000 },
     { destino: "Cúcuta", fecha: "2025-06-01", hora: "17:00", plan: "Plan Ejecutivo", precio: 6800000 },
     { destino: "Santa Marta", fecha: "2025-06-02", hora: "11:30", plan: "Plan Ejecutivo", precio: 6800000 },
-    { destino: "Medellín", fecha: "2025-05-30", hora: "08:00", plan: "Plan Básico", precio: 3200000 }, // Ya salió
+    { destino: "Medellín", fecha: "2025-05-30", hora: "08:00", plan: "Plan Básico", precio: 3200000 }, 
     { destino: "Barranquilla", fecha: "2025-06-03", hora: "10:00", plan: "Avión Ambulancia", precio: 9500000, agotado: true }
   ];
   
@@ -46,7 +44,6 @@ const rutas = [
     carrito.push(boleto);
     actualizarCarritoUI();
   
-    // Guardar en localStorage para la página de compra
     const boletosGuardados = JSON.parse(localStorage.getItem("boletos") || "[]");
     boletosGuardados.push({
       destino: boleto.destino,
@@ -54,7 +51,7 @@ const rutas = [
       hora: boleto.hora,
       plan: boleto.plan,
       precio: boleto.precio,
-      origen: "Ocaña" // puedes cambiar el origen si es variable
+      origen: "Ocaña" 
     });
     localStorage.setItem("boletos", JSON.stringify(boletosGuardados));
   }
