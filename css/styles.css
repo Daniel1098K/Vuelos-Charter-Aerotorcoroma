@@ -116,10 +116,12 @@ main p {
 }
 
 .registro h2 {
-  font-size: 2rem;
-  color: #004c3f;
+  text-align: center;
+  font-size: 24px;
   margin-bottom: 20px;
+  color: #333;
 }
+
 
 .registro form {
   display: flex;
