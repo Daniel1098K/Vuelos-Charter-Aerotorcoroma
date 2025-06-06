@@ -99,24 +99,22 @@ const tooltipTitle = document.getElementById('tooltip-title');
 const tooltipText = document.getElementById('tooltip-text');
 const tooltipImages = document.getElementById('tooltip-images');
 
-// Diccionario de contenido del tooltip por título
 const datosTooltip = {
 
   "Servicio Ejecutivo": {
     texto: "Comodidad y eficiencia para ejecutivos en movimiento.",
-    imagenes: ["file/500736831_1233923131431341_6699981947240523130_n.jpg", "file/plan.png"]
+    imagenes: ["file/500736831_1233923131431341_6699981947240523130_n.webp", "file/plan.webp"]
   },
   "Servicio Jet SABRE 65": {
     texto: "Lujo, velocidad y alcance para vuelos VIP nacionales e internacionales.",
-    imagenes: ["file/JetSabre2.jpg", "file/JetSabre1.jpg"]
+    imagenes: ["file/JetSabre2.webp", "file/JetSabre1.webp"]
   },
   "Servicio Jetstream 32": {
   texto: "El Jetstream 32 es ideal para vuelos chárter de corto alcance con grupos medianos. Cuenta con capacidad para 19 pasajeros, cabina presurizada y excelente rendimiento en pistas cortas.",
-  imagenes: ["file/JetSteam322.jpg", "file/JetStrean321.jpg"] // Puedes agregar una imagen de interior si tienes
+  imagenes: ["file/JetSteam322.webp", "file/JetStrean321.webp"]
 }
 };
 
-// Mostrar tooltip al pasar el mouse
 planes.forEach(card => {
   const title = card.querySelector('h3').textContent;
 
@@ -127,7 +125,7 @@ planes.forEach(card => {
     tooltipTitle.textContent = title;
     tooltipText.textContent = datos.texto;
 
-    tooltipImages.innerHTML = ""; // Limpiar
+    tooltipImages.innerHTML = ""; 
     datos.imagenes.forEach(src => {
       const img = document.createElement('img');
       img.src = src;
