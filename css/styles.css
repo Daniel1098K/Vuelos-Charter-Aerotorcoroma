@@ -122,7 +122,6 @@ main p {
   color: #333;
 }
 
-
 .registro form {
   display: flex;
   flex-direction: column;
@@ -318,6 +317,53 @@ main p {
   font-size: 0.95rem;
 }
 
+#contadorBadge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #007866, #004c3f);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(0, 76, 63, 0.3);
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: center;
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+#contadorBadge::before {
+  content: "👁️";
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+#contadorBadge:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 76, 63, 0.4);
+  background: linear-gradient(135deg, #005f4a, #003d32);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(0, 76, 63, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(0, 76, 63, 0.5);
+  }
+}
+
 footer {
   background-color: #004c3f;
   color: white;
@@ -417,28 +463,14 @@ footer a:hover {
     max-width: 250px;
     padding: 12px;
   }
-}
 
-#contadorBadge {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #212121;
-  color: white;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  padding: 10px 15px;
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  z-index: 9999;
-  opacity: 0.9;
-  transition: opacity 0.3s;
+  #contadorBadge {
+    bottom: 18px;
+    right: 18px;
+    padding: 11px 16px;
+    font-size: 0.85rem;
+  }
 }
-
-#contadorBadge:hover {
-  opacity: 1;
-}
-
 
 @media (max-width: 480px) {
   .hero h1 {
@@ -473,5 +505,18 @@ footer a:hover {
   .tooltip {
     max-width: 200px;
     padding: 10px;
+  }
+
+  #contadorBadge {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    min-width: 100px;
+    border-radius: 20px;
+  }
+  
+  #contadorBadge::before {
+    font-size: 0.9rem;
   }
 }
