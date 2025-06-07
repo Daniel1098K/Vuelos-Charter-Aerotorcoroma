@@ -8,7 +8,6 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background-color: #f8f8f8;
   color: #333;
-  padding-bottom: 80px;
 }
 
 header {
@@ -369,7 +368,6 @@ footer {
   color: white;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 40px;
 }
 
 footer a {
