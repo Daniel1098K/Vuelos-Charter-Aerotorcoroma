@@ -112,6 +112,7 @@ main p {
   padding: 40px 20px;
   background-color: #f0fdf4;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .registro h2 {
@@ -225,6 +226,7 @@ main p {
 
 .rutas {
   padding: 40px 20px;
+  margin-bottom: 0;
 }
 
 .rutas table {
@@ -363,6 +365,10 @@ main p {
   }
 }
 
+section:last-of-type {
+  margin-bottom: 0;
+}
+
 footer {
   background-color: #004c3f;
   color: white;
@@ -427,11 +433,18 @@ footer a:hover {
     margin: 0 10px;
   }
 
+  .planes {
+  margin-bottom: 0;
+}
+
   .planes-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 10px;
-  }
+  margin-bottom: 0;
+}
+  background-color: #004c3f;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
 
   .plan-card {
     margin: 0 auto;
