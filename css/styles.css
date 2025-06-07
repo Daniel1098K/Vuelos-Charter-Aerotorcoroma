@@ -419,6 +419,27 @@ footer a:hover {
   }
 }
 
+#contadorBadge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #212121;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 9999;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+#contadorBadge:hover {
+  opacity: 1;
+}
+
+
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.8em;
