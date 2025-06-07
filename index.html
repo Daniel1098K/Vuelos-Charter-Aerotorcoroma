@@ -9,11 +9,10 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="file/Sin_título-removebg-preview.webp"> 
 </head>
-  <!-- Firebase SDKs -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
-  import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-database.js";
-
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-database.js";
+  
   const firebaseConfig = {
     apiKey: "AIzaSyAxeTycfdXFNtM5VRje3n0w0i65P4whzoA",
     authDomain: "contadorvisitasweb-d9524.firebaseapp.com",
@@ -23,15 +22,22 @@
     messagingSenderId: "233724773454",
     appId: "1:233724773454:web:cfddd33c37b9d49bb1af1f"
   };
-
+  
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
   const visitasRef = ref(database, 'visitas');
-
+  
+  if (!sessionStorage.getItem('visitContada')) {
+    runTransaction(visitasRef, (currentValue) => {
+      return (currentValue || 0) + 1;
+    }).then(() => {
+      sessionStorage.setItem('visitContada', 'true');
+    });
+  }
+  
   onValue(visitasRef, (snapshot) => {
-    let visitas = snapshot.val() || 0;
-    set(visitasRef, visitas + 1);
-    document.getElementById("contadorBadge").innerText = "Visitas: " + (visitas + 1);
+    const visitas = snapshot.val() || 0;
+    document.getElementById("contadorBadge").innerText = "Visitas: " + visitas;
   });
 </script>
 
